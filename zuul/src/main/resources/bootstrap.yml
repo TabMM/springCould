@@ -1,0 +1,11 @@
+#Bootstrap.yml takes precedence over application.yml(bootstrap.yml 优先级高于 application.yml)
+spring:
+  application:
+    name: zuul
+  cloud:
+  #Config request configuration（config 请求配置）
+    config:
+      uri: http://localhost:6000
+      profile: dev
+      label: springcould
+

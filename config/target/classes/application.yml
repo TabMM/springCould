@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/douglas-scoker/config-demo.git
+          username: douglas-scoker
+          password: LDFZWL12
+          search-paths: config-file
+server:
+  port: 6000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:123456@localhost:8766/eureka/

@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: consumer
+server:
+  port: 9000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:123456@localhost:8766/eureka/
+#Enable feign's hystrix support, which is off by default（开启feign的hystrix支持,默认是关闭）
+feign:
+  hystrix:
+    enabled: true
+#Load balancing algorithm configuration（负载均衡算法配置）
+provider:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

@@ -1,0 +1,18 @@
+server:
+  port: 8766
+#eureka Basic configuration
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:123456@localhost:8766/eureka/
+    fetch-registry: false
+    register-with-eureka: false
+#security verification
+spring:
+  security:
+    user:
+      #Set user name
+      name: root
+      #Set password
+      password: 123456
+      roles:

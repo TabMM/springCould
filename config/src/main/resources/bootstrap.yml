@@ -1,0 +1,3 @@
+#If you need JCE plug-in to enable encryption verification, please google（开启加密验证， 需要jce 插件 请自行谷歌）
+encrypt:
+  key: dm

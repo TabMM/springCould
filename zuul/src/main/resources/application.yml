@@ -1,0 +1,18 @@
+
+server:
+  port: 7000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:123456@localhost:8766/eureka/
+zuul:
+  routes:
+    # Consumer oriented routing configuration（面向consumer的路由配置）
+    consumer: /test/**
+#开启暴露
+#Management.security.enabled is out of date with the following configuration（management.security.enabled 过时，用以下配置）
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

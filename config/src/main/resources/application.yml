@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      #When connecting to the warehouse, I configure it as multi file and multi branch（连接仓库时配置，我配置为多文件多分支)
+      server:
+        git:
+          #I use code cloud or GitHub
+          uri: https://gitee.com/douglas-scoker/config-demo.git
+          username: douglas-scoker
+          #The password is wrong
+          password: error
+          #Folder path
+          search-paths: config-file
+server:
+  port: 6000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:123456@localhost:8766/eureka/
